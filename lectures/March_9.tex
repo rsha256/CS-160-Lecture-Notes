@@ -1,0 +1,237 @@
+\documentclass[11pt]{article}
+\usepackage{header}
+
+\def\P{\mathbb{P}} % Probability
+\def\d{\mathrm{d}}
+\def\zt{\stackrel{\mathcal{Z}}{\leftrightarrow}}
+\def\ft{\stackrel{\mathcal{F}}{\leftrightarrow}}
+\def\Xhat{\hat{X}(z)}
+\def\Yhat{\hat{Y}(z)}
+\def\Xhatu{\hat{x}(z)}
+\def\Yhatu{\hat{y}(z)}
+\def\Hhat{\hat{H}(z)}
+\def\zinv{z^{-1}}
+\def\zn{z^{-n}}
+\def\zpn{z^{n}}
+\def\zl{z^{-\ell}}
+\def\zpl{z^{\ell}}
+\def\zN{z^{-N}}
+\def\zpN{z^{N}}
+\def\zopn{z_{0}^{n}}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+\newcommand{\myparagrapht}[1]{\paragraph{#1}\mbox{}}
+\newcommand{\submyparagraph}[1]{\subparagraph{#1}\mbox{}\\}
+\newcommand{\submyparagrapht}[1]{\subparagraph{#1}\mbox{}}
+\newcommand{\ze}[1]{z^{-#1}}
+\newcommand{\Xshat}[1]{\hat{X}_{\text{#1}}(z)}
+\newcommand{\Xphat}[1]{\hat{X}\left(#1\right)}
+\newcommand{\Hphat}[1]{\hat{H}\left(#1\right)}
+\newcommand{\pd}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\dv}[2]{\frac{\mathrm d{#1}}{\mathrm d{#2}}}
+\newcommand{\pdv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\let\originalmiddle=\middle
+\DeclareMathOperator{\sgn}{sgn}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+\usepackage[table]{xcolor}
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{2.5}
+\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
+\arrayrulecolor[HTML]{DB5800}
+
+\begin{document}
+% \setcounter{section}{8}
+    \title{CS 160 Lecture Notes}
+    
+    \thispagestyle{empty}
+
+    \begin{center}
+    {\LARGE \bf Lecture Notes}\\
+    {\large CS 160 with Bjoern Hartmann}\\
+    Spring 2023
+    \end{center}
+
+
+
+    \begin{enumerate}
+        \item empirical studies very expensive in terms of time and money
+ 
+    \end{enumerate}
+
+    \subsubsection{Inspection Techniques}
+    \begin{enumerate}
+        \item Cognitive walkthroughs: put yourself in the shoes of the user. Check to see if the path users want to go is clear and logical. 
+
+        
+        
+        \item Heuristic Evaluation: assess based on predetermined criteria / heuristics
+
+        \item Other non-inspection techniques (mechanical turk)
+    \end{enumerate}
+
+    \subsubsection{Cognitive Walkthrough}
+    \begin{enumerate}
+        \item Get concrete goal
+        \item get actions needed to complete said goal
+        \item At each step as
+        \begin{enumerate}
+            \item Will the users know what to do?
+            \item Will the user notice that the correct action is available?
+            \item Will the user interpret the application feedback correctly?
+        \end{enumerate}
+    \end{enumerate}
+
+    \subsection{Example: Find a book in a library}
+
+    \begin{enumerate}
+        \item find the library website
+        \item find location of said book
+        \item complete search form
+        \item parse through to find latest edition
+        \item click to get to the book's page
+        \item find library and call number
+    \end{enumerate}
+
+    \subsubsection{Heuristic Evaluation}
+    \begin{enumerate}
+        \item Heuristic: rules of thumb that describe features of usable systems
+        \item Example: Minimize user's memory load
+        \begin{enumerate}
+            \item get small number (3-5) people together to look at the UI separately
+            \item give them list of heuristics
+            \item get them to evaluate your design 
+            \item aggregate findings of the independent evaluators and discuss
+        \end{enumerate}
+        \begin{enumerate}
+            \item H2-1:Visibility of system status 
+            \item H2-2: Match system and real world
+            \item H2-3: User control and freedom
+            \item H2-4: Consistency and standards
+            \item H2-5: Error prevention
+            \item H2-6: Recognition rather than recall
+            \item H2-7: Flexibility and efficiency of use
+            \item H2-8: Aesthetic and minimalist design
+            \item H2-9: Help users recognize, diagnose, recover from errors
+            \item H2-10: Help and documentation
+        \end{enumerate}
+    \end{enumerate}
+
+Visibility of system status 
+\begin{enumerate}
+    \item Spiny ball
+    \item buffering circle
+    \item provide redundant information for each decision a user makes (do you want to save     
+    \item changes -> your changes will not be saved if you don't)
+\end{enumerate}
+
+
+Match System and World
+\begin{enumerate}
+    
+\item follow real world conventions
+\item pay attention to metaphors
+\item Ex: used to drag floppy disk to trash to eject it. Did not line up with what trash usually does (data deletion)
+
+\end{enumerate}
+
+User control and freedom
+\begin{enumerate}
+    \item users don't like being trapped
+    \item give them freedom to choose to cancel, escape, universal undo (ctrl-z), postpone, etc.
+ 
+\end{enumerate}
+
+
+
+Consistency and standards
+\begin{enumerate}
+    \item don't violate standards since they will behave according to how they expect things to behave
+    \item example: put a word in a rounded rectangle implies its a button. People will click it.
+\end{enumerate}
+
+Error prevention
+\begin{enumerate}
+    \item Check for errors (are you sure you want to do that)
+    \item visual metaphors can help clear up incongruities
+    \item types of errors: slips (right plan, bad execution) and mistakes (wrong plan, good execution). 
+    
+\end{enumerate}
+
+Recognition over Recall
+\begin{enumerate}
+    \item People are good at recognition and bad at recall
+    \item Example: open recent files tab 
+\end{enumerate}
+
+Flexibility and efficiency of use
+\begin{enumerate}
+    \item experts want to save time
+    \item Example: keyboard shortcuts. autocomplete 
+\end{enumerate}
+
+Aesthetic and Minimalist Design
+\begin{enumerate}
+    \item Don't overload screen with information. Give them "details on demand"
+    \item Occam's razor: remove or hide irrelevant or rarely needed info
+    \item Present information in natural reading order (read left to right, top to bottom
+\end{enumerate}
+
+Help users diagnose recognise 
+\begin{enumerate}
+    \item When errors happen, help the users answer the "what do I do next?" question
+    \item write good error messages that are descriptive and offer solutions
+    \item Let them undo at every step  
+\end{enumerate}
+
+Provide help and documentation
+\begin{enumerate}
+    \item easy to search
+    \item focused on tasks
+    \item list concrete steps to carry out
+    \item not too long
+    \item examples \begin{enumerate}
+        \item tutorials
+        \item reference manuals
+        \item tool-tips
+        \item "whats this" cursor
+        \item search help bar
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{heuristic evaluation steps}
+\begin{enumerate}
+    \item ) Pre-evaluation training
+Provide the evaluator with domain knowledge if needed
+2) Evaluation
+Individuals evaluate interface then aggregate results
+Compare interface elements with heuristics
+Work in 2 passes
+First pass: get a feel for flow and scope
+Second pass: focus on specific elements
+Each evaluator produces list of problems
+Explain why with reference to heuristic or other information
+Be specific and list each problem separately
+
+3) Severity rating
+Establishes a ranking between problems
+Cosmetic, minor, major and catastrophic
+First rate individually, then as a group
+4) Debriefing
+Discuss outcome with design team
+Suggest potential solutions
+Assess how hard things are to fix
+\end{enumerate}
+
+
+\subsection{pros and cons of HE vs user testing}
+\begin{enumerate}
+    \item Pros: Much faster, doesn't require interpreting user actions
+    \item Cons: HE is less accurate, may find false positives (things that conceptually could be problems but are not actually), and need multiple evaluations to be done for verification (5 is good)
+    
+\end{enumerate}
+
+\end{document}

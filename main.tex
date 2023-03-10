@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage{header}
+
+\def\P{\mathbb{P}} % Probability
+\def\d{\mathrm{d}}
+\def\zt{\stackrel{\mathcal{Z}}{\leftrightarrow}}
+\def\ft{\stackrel{\mathcal{F}}{\leftrightarrow}}
+\def\Xhat{\hat{X}(z)}
+\def\Yhat{\hat{Y}(z)}
+\def\Xhatu{\hat{x}(z)}
+\def\Yhatu{\hat{y}(z)}
+\def\Hhat{\hat{H}(z)}
+\def\zinv{z^{-1}}
+\def\zn{z^{-n}}
+\def\zpn{z^{n}}
+\def\zl{z^{-\ell}}
+\def\zpl{z^{\ell}}
+\def\zN{z^{-N}}
+\def\zpN{z^{N}}
+\def\zopn{z_{0}^{n}}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+\newcommand{\myparagrapht}[1]{\paragraph{#1}\mbox{}}
+\newcommand{\submyparagraph}[1]{\subparagraph{#1}\mbox{}\\}
+\newcommand{\submyparagrapht}[1]{\subparagraph{#1}\mbox{}}
+\newcommand{\ze}[1]{z^{-#1}}
+\newcommand{\Xshat}[1]{\hat{X}_{\text{#1}}(z)}
+\newcommand{\Xphat}[1]{\hat{X}\left(#1\right)}
+\newcommand{\Hphat}[1]{\hat{H}\left(#1\right)}
+\newcommand{\pd}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\dv}[2]{\frac{\mathrm d{#1}}{\mathrm d{#2}}}
+\newcommand{\pdv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\let\originalmiddle=\middle
+\DeclareMathOperator{\sgn}{sgn}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+\usepackage[table]{xcolor}
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{2.5}
+\newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
+\arrayrulecolor[HTML]{DB5800}
+
+\begin{document}
+% \setcounter{section}{8}
+    \title{CS 160 Lecture Notes}
+    
+    \thispagestyle{empty}
+
+    \begin{center}
+    {\LARGE \bf Lecture Notes}\\
+    {\large CS 160 with Bjoern Hartmann}\\
+    Spring 2023
+    \end{center}
+    
+    \tableofcontents
+
+    % \include{./lectures/ack.tex}
+    % Note that I use include over input to force new page!
+    \include{./lectures/wk1/lecture1.tex} 
+    \include{./lectures/wk1/lecture2.tex}
+    \include{./lectures/wk2/lecture3.tex}
+    \include{./lectures/wk2/lecture4.tex}
+    \include{./lectures/wk3/lecture5.tex}
+    \include{./lectures/wk3/lecture6.tex}
+    \include{./lectures/wk4/lecture7.tex}
+    \include{./lectures/wk4/lecture8.tex}
+    \include{./lectures/wk5/lecture9.tex}
+    \include{./lectures/wk5/lecture10.tex}
+    \include{./lectures/wk6/lecture11.tex}
+    \include{./lectures/wk6/lecture12.tex}
+    
+    \include{./lectures/wk7/lecture13.tex}
+    \include{./lectures/wk7/lecture14.tex}
+    
+    \include{./lectures/wk8/lecture15.tex}
+    \include{./lectures/wk8/lecture16.tex}
+    
+    % \include{./lectures/wk9/lecture17.tex}
+    % \include{./lectures/wk9/lecture18.tex}
+    % % \include{./lectures/lecture19.tex}
+    % % \include{./lectures/lecture20.tex}
+    % % \include{./lectures/lecture21.tex}
+    % % \include{./lectures/lecture22.tex}
+    % % \include{./lectures/lecture23.tex}
+    % % \include{./lectures/lecture24.tex}
+    
+    % %  \include{./lectures/lecture25.tex}
+    
+    % \include{./lectures/wk11/lec11-10-2022.tex}
+    % \include{./lectures/wk12/11-15-2022.tex}
+    % \include{./lectures/wk12/11-17-2022.tex}
+    % \include{./lectures/wk13/11-22-2022.tex}
+    % \include{./lectures/appendix.tex}
+\end{document}
