@@ -1,11 +1,165 @@
-\section{Tuesday, February 28th}
-\subsection{Information Visualization, Design Patterns}
-Verbal Notes not given in lecture slides:
-\begin{itemize}
-    \item EDA: Exploratory Data Analysis is used for performing critical investigations in data to find patterns
-    \item Start with Color/Orientation/Shape so you're not that constrained for adding O/Q features in the future
-    \item Delta Stimulus
-    \item Loudness = approx 6.5
-    \item Heaviness and taste greater than 1 $\implies$ we overestimate those sensations.
-    \item Certain Visual Variables are better for comparisons.
-\end{itemize}
+\section{Thursday, March 9th: Usability Inspection}
+\begin{shaded}
+Empirical studies are very expensive in terms of time and money
+\end{shaded}
+\subsection{Usability Testing}
+    \subsubsection{Inspection Techniques}
+    \begin{enumerate}
+        \item Cognitive walkthroughs: put yourself in the shoes of the user. Check to see if the path users want to go is clear and logical. 
+        
+        \item Heuristic Evaluation: assess based on predetermined criteria / heuristics
+
+        \item Other non-inspection techniques (mechanical turk)
+    \end{enumerate}
+
+    \subsubsection{Cognitive Walkthrough}
+    \begin{enumerate}
+        \item Get concrete goal
+        \item get actions needed to complete said goal
+        \item At each step as
+        \begin{enumerate}
+            \item Will the users know what to do?
+            \item Will the user notice that the correct action is available?
+            \item Will the user interpret the application feedback correctly?
+        \end{enumerate}
+    \end{enumerate}
+
+    \subsection{Example: Find a book in a library}
+
+    \begin{enumerate}
+        \item find the library website
+        \item find location of said book
+        \item complete search form
+        \item parse through to find latest edition
+        \item click to get to the book's page
+        \item find library and call number
+    \end{enumerate}
+
+    \subsubsection{Heuristic Evaluation}
+    \begin{enumerate}
+        \item Heuristic: rules of thumb that describe features of usable systems
+        \item Example: Minimize user's memory load
+        \begin{enumerate}
+            \item get small number (3-5) people together to look at the UI separately
+            \item give them list of heuristics
+            \item get them to evaluate your design 
+            \item aggregate findings of the independent evaluators and discuss
+        \end{enumerate}
+        \begin{enumerate}
+            \item H2-1:Visibility of system status 
+            \item H2-2: Match system and real world
+            \item H2-3: User control and freedom
+            \item H2-4: Consistency and standards
+            \item H2-5: Error prevention
+            \item H2-6: Recognition rather than recall
+            \item H2-7: Flexibility and efficiency of use
+            \item H2-8: Aesthetic and minimalist design
+            \item H2-9: Help users recognize, diagnose, recover from errors
+            \item H2-10: Help and documentation
+        \end{enumerate}
+    \end{enumerate}
+
+\paragraph{Visibility of system status}
+\begin{enumerate}
+    \item Spiny ball
+    \item buffering circle
+    \item provide redundant information for each decision a user makes (do you want to save changes $\implies$ your changes will not be saved if you don't)
+\end{enumerate}
+
+\paragraph{Match System and World}
+\begin{enumerate}    
+\item follow real world conventions
+\item pay attention to metaphors
+\item Ex: used to drag floppy disk to trash to eject it. Did not line up with what trash usually does (data deletion)
+\end{enumerate}
+
+\paragraph{User control and freedom}
+\begin{enumerate}
+    \item users don't like being trapped
+    \item give them freedom to choose to cancel, escape, universal undo (ctrl-z), postpone, etc.
+ 
+\end{enumerate}
+
+\paragraph{Consistency and standards}
+\begin{enumerate}
+    \item don't violate standards since they will behave according to how they expect things to behave
+    \item example: put a word in a rounded rectangle implies its a button. People will click it.
+\end{enumerate}
+
+\paragraph{Error prevention}
+\begin{enumerate}
+    \item Check for errors (are you sure you want to do that)
+    \item visual metaphors can help clear up incongruities
+    \item types of errors: slips (right plan, bad execution) and mistakes (wrong plan, good execution). 
+\end{enumerate}
+
+\paragraph{Recognition over Recall}
+\begin{enumerate}
+    \item People are good at recognition and bad at recall
+    \item Example: open recent files tab 
+\end{enumerate}
+
+\paragraph{Flexibility and efficiency of use}
+\begin{enumerate}
+    \item Experts want to save time
+    \item Example: keyboard shortcuts, autocomplete 
+\end{enumerate}
+
+\paragraph{Aesthetic and Minimalist Design}
+\begin{enumerate}
+    \item Don't overload screen with information. Give them "details on demand"
+    \item Occam's razor: remove or hide irrelevant or rarely needed info
+    \item Present information in natural reading order (read left to right, top to bottom
+\end{enumerate}
+
+\paragraph{Help users diagnose recognise }
+\begin{enumerate}
+    \item When errors happen, help the users answer the "what do I do next?" question
+    \item write good error messages that are descriptive and offer solutions
+    \item Let them undo at every step  
+\end{enumerate}
+
+\paragraph{Provide help and documentation}
+\begin{enumerate}
+    \item easy to search
+    \item focused on tasks
+    \item list concrete steps to carry out
+    \item not too long
+    \item examples \begin{enumerate}
+        \item tutorials
+        \item reference manuals
+        \item tool-tips
+        \item "whats this" cursor
+        \item search help bar
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Heuristic Evaluation Steps}
+\begin{enumerate}
+    \item Pre-evaluation training
+Provide the evaluator with domain knowledge if needed
+2) Evaluation
+Individuals evaluate interface then aggregate results
+Compare interface elements with heuristics
+Work in 2 passes
+First pass: get a feel for flow and scope
+Second pass: focus on specific elements
+Each evaluator produces list of problems
+Explain why with reference to heuristic or other information
+Be specific and list each problem separately
+
+3) Severity rating
+Establishes a ranking between problems
+Cosmetic, minor, major and catastrophic
+First rate individually, then as a group
+4) Debriefing
+Discuss outcome with design team
+Suggest potential solutions
+Assess how hard things are to fix
+\end{enumerate}
+
+\subsection{Pros and Cons of HE vs User Testing}
+\begin{enumerate}
+    \item Pros: Much faster, doesn't require interpreting user actions
+    \item Cons: HE is less accurate, may find false positives (things that conceptually could be problems but are not actually), and need multiple evaluations to be done for verification (5 is good)
+\end{enumerate}
